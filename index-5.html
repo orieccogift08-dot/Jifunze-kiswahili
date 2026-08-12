@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="JIFUNZE KISWAHILI - Practical Kiswahili lessons for speaking, understanding and everyday communication.">
+  <title>JIFUNZE KISWAHILI | Learn Kiswahili</title>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green: #075b43;
+      --green-dark: #064936;
+      --yellow: #f7c843;
+      --cream: #fffdf5;
+      --text: #243b36;
+      --white: #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--green);
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--white);
+      box-shadow: 0 2px 12px rgba(0,0,0,.12);
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: auto;
+      min-height: 76px;
+      padding: 12px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      text-decoration: none;
+      font-size: clamp(1.15rem, 3vw, 1.55rem);
+      font-weight: 900;
+      letter-spacing: -.5px;
+      white-space: nowrap;
+    }
+
+    .logo .green { color: var(--green); }
+    .logo .yellow { color: #e6b72f; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .nav-links a:hover { color: var(--green); }
+
+    .menu-btn {
+      display: none;
+      border: 0;
+      background: transparent;
+      font-size: 2rem;
+      cursor: pointer;
+      color: var(--text);
+    }
+
+    .hero {
+      background: var(--green);
+      color: var(--white);
+      padding: 70px 22px 85px;
+    }
+
+    .hero-inner {
+      max-width: 1180px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      color: var(--white);
+      font-size: clamp(2.6rem, 6vw, 5.2rem);
+      line-height: 1.03;
+      letter-spacing: -2px;
+      margin-bottom: 24px;
+      max-width: 800px;
+    }
+
+    .hero h1 span { color: var(--yellow); }
+
+    .hero p {
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+      max-width: 720px;
+      margin-bottom: 32px;
+      color: #f4fff9;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 1.05rem;
+      padding: 16px 28px;
+      border-radius: 15px;
+      transition: transform .2s, opacity .2s;
+    }
+
+    .btn:hover { transform: translateY(-2px); opacity: .92; }
+
+    .btn-primary {
+      background: var(--yellow);
+      color: #18382f;
+    }
+
+    .btn-outline {
+      color: var(--white);
+      border: 2px solid var(--white);
+    }
+
+    .hero-card {
+      background: var(--white);
+      color: var(--text);
+      border-radius: 28px;
+      padding: 30px;
+      box-shadow: 0 18px 45px rgba(0,0,0,.18);
+    }
+
+    .hero-card h2 {
+      color: var(--green);
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+    }
+
+    .hero-card ul {
+      list-style: none;
+    }
+
+    .hero-card li {
+      padding: 13px 0;
+      border-bottom: 1px solid #e8ecea;
+      font-size: 1.05rem;
+    }
+
+    .hero-card li:last-child { border-bottom: 0; }
+
+    section {
+      padding: 75px 22px;
+      background: var(--cream);
+    }
+
+    .section-inner {
+      max-width: 1180px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      color: var(--green);
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 14px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 42px;
+      color: #50615c;
+      font-size: 1.08rem;
+    }
+
+    .lessons {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .lesson {
+      background: var(--white);
+      padding: 27px;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.07);
+    }
+
+    .lesson .icon { font-size: 2rem; }
+    .lesson h3 { color: var(--green); margin: 10px 0 8px; }
+
+    .booking {
+      background: var(--green);
+      color: var(--white);
+    }
+
+    .booking .section-title { color: var(--white); }
+    .booking .section-subtitle { color: #e5f5ee; }
+
+    .contact-box {
+      max-width: 720px;
+      margin: auto;
+      background: var(--white);
+      color: var(--text);
+      padding: 32px;
+      border-radius: 24px;
+      text-align: center;
+    }
+
+    .contact-box p { margin: 8px 0; font-size: 1.08rem; }
+    .contact-box strong { color: var(--green); }
+
+    footer {
+      background: #063d2f;
+      color: #e8f6f0;
+      text-align: center;
+      padding: 28px 20px;
+    }
+
+
+    .lesson-page { background: #f5fbf7; }
+
+    .lesson-header { text-align: center; margin-bottom: 34px; }
+
+    .lesson-badge {
+      display: inline-block;
+      background: var(--yellow);
+      color: #18382f;
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-weight: 900;
+      font-size: .82rem;
+      letter-spacing: .5px;
+      margin-bottom: 12px;
+    }
+
+    .start-lesson {
+      margin: 35px auto 0;
+      max-width: 680px;
+      text-align: center;
+      background: var(--green);
+      color: white;
+      padding: 28px;
+      border-radius: 22px;
+    }
+
+    .start-lesson h3 { font-size: 1.55rem; margin-bottom: 6px; }
+    .start-lesson p { margin-bottom: 18px; color: #e7f7ef; }
+
+    .lesson-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .lesson-panel {
+      background: var(--white);
+      padding: 28px;
+      border-radius: 22px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.07);
+    }
+
+    .lesson-panel h3, .exercise h3, .student-task h3 {
+      color: var(--green);
+      font-size: 1.45rem;
+      margin-bottom: 18px;
+    }
+
+    .vocab-list div {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 12px 0;
+      border-bottom: 1px solid #e5ece8;
+    }
+
+    .vocab-list div:last-child { border-bottom: 0; }
+    .vocab-list strong { color: var(--green); }
+    .vocab-list span { color: #566761; text-align: right; }
+
+    .dialogue {
+      background: #f2f8f5;
+      border-left: 5px solid var(--yellow);
+      padding: 17px 20px;
+      border-radius: 12px;
+      margin-bottom: 18px;
+    }
+
+    .dialogue p { margin: 8px 0; }
+
+    .speak-btn {
+      border: 0;
+      background: var(--green);
+      color: white;
+      padding: 13px 17px;
+      border-radius: 12px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .exercise, .student-task {
+      margin-top: 24px;
+      background: white;
+      padding: 30px;
+      border-radius: 22px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.07);
+      text-align: center;
+    }
+
+    .question { font-size: 1.25rem; margin: 10px 0 18px; }
+    .answers { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
+
+    .answers button {
+      border: 2px solid var(--green);
+      background: white;
+      color: var(--green);
+      padding: 12px 17px;
+      border-radius: 12px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .answers button:hover { background: #eef8f3; }
+    .answer-result { min-height: 28px; margin-top: 15px; font-weight: 800; }
+
+    .formula {
+      display: inline-block;
+      background: #fff8d9;
+      padding: 16px 20px;
+      border-radius: 14px;
+      margin: 12px 0 15px;
+      color: #315148;
+    }
+
+    .student-task p { margin-bottom: 8px; }
+
+    .next-lesson {
+      margin-top: 25px;
+      background: var(--green);
+      color: white;
+      border-radius: 22px;
+      padding: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .next-lesson h3 { margin-top: 5px; }
+    .green-outline { border-color: white; color: white; }
+
+    @media (max-width: 800px) {
+      .nav { min-height: 68px; }
+      .menu-btn { display: block; }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        padding: 18px 22px 25px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        box-shadow: 0 8px 15px rgba(0,0,0,.12);
+      }
+
+      .nav-links.show { display: flex; }
+      .nav-links a { padding: 12px 0; border-bottom: 1px solid #eee; }
+
+      .hero { padding: 48px 18px 60px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 35px; }
+      .hero h1 { font-size: clamp(2.45rem, 12vw, 4rem); letter-spacing: -1.2px; }
+
+      .buttons { flex-direction: column; }
+      .btn { text-align: center; width: 100%; }
+
+      section { padding: 55px 18px; }
+      .lessons { grid-template-columns: 1fr; }
+      .lesson-grid { grid-template-columns: 1fr; }
+      .next-lesson { flex-direction: column; align-items: stretch; text-align: center; }
+      .vocab-list div { align-items: flex-start; }
+      .answers { flex-direction: column; }
+      .answers button { width: 100%; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="nav">
+      <a class="logo" href="#home" aria-label="Jifunze Kiswahili home">
+        <span class="green">JIFUNZE</span> <span class="yellow">KISWAHILI</span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#lessons">Lessons</a>
+        <a href="#learn">What You'll Learn</a>
+        <a href="#book">Book a Lesson</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div>
+          <!-- Fixed: the hero heading is now fully white/yellow and never hidden behind the header -->
+          <h1>Learn Kiswahili with <span>confidence.</span></h1>
+          <p>
+            Practical Kiswahili lessons designed to help you speak,
+            understand and use the language in everyday life, conversation and travel.
+          </p>
+
+          <div class="buttons">
+            <a class="btn btn-primary" href="#book">Book a Lesson</a>
+            <a class="btn btn-outline" href="#lessons">Explore Lessons</a>
+          </div>
+        </div>
+
+        <div class="hero-card" id="learn">
+          <h2>What you'll learn</h2>
+          <ul>
+            <li>🗣️ Everyday conversation</li>
+            <li>📖 Useful vocabulary &amp; grammar</li>
+            <li>✍️ Reading and writing</li>
+            <li>✈️ Kiswahili for travel</li>
+            <li>🎯 Beginner-friendly practice</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="lessons">
+      <div class="section-inner">
+        <h2 class="section-title">Explore Kiswahili Lessons</h2>
+        <p class="section-subtitle">
+          Learn step by step with practical topics and real-life conversation.
+        </p>
+
+        <div class="lessons">
+          <article class="lesson">
+            <div class="icon">👋</div>
+            <h3>Greetings</h3>
+            <p>Learn common greetings, introductions and polite expressions.</p>
+          </article>
+
+          <article class="lesson">
+            <div class="icon">💬</div>
+            <h3>Conversation</h3>
+            <p>Practice useful phrases for everyday conversations.</p>
+          </article>
+
+          <article class="lesson">
+            <div class="icon">📚</div>
+            <h3>Vocabulary & Grammar</h3>
+            <p>Build a strong foundation with useful words and simple grammar.</p>
+          </article>
+
+          <article class="lesson">
+            <div class="icon">✈️</div>
+            <h3>Travel Kiswahili</h3>
+            <p>Learn the language you need for travel, directions and shopping.</p>
+          </article>
+
+          <article class="lesson">
+            <div class="icon">✍️</div>
+            <h3>Reading & Writing</h3>
+            <p>Improve your reading and writing through guided practice.</p>
+          </article>
+
+          <article class="lesson">
+            <div class="icon">🎯</div>
+            <h3>Speaking Practice</h3>
+            <p>Build confidence by practicing real situations and dialogues.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="lesson-page" id="lesson1">
+      <div class="section-inner">
+        <div class="lesson-header">
+          <span class="lesson-badge">LESSON 1</span>
+          <h2 class="section-title">Greetings &amp; Introductions</h2>
+          <p class="section-subtitle">
+            Learn simple Kiswahili greetings and introduce yourself with confidence.
+          </p>
+        </div>
+
+        <div class="lesson-grid">
+          <article class="lesson-panel">
+            <h3>📖 Vocabulary</h3>
+            <div class="vocab-list">
+              <div><strong>Jambo</strong><span>Hello</span></div>
+              <div><strong>Habari?</strong><span>How are you?</span></div>
+              <div><strong>Nzuri</strong><span>Good / Fine</span></div>
+              <div><strong>Asante</strong><span>Thank you</span></div>
+              <div><strong>Karibu</strong><span>Welcome</span></div>
+              <div><strong>Naitwa...</strong><span>My name is...</span></div>
+              <div><strong>Unaitwa nani?</strong><span>What is your name?</span></div>
+            </div>
+          </article>
+
+          <article class="lesson-panel">
+            <h3>🗣️ Practice Dialogue</h3>
+            <div class="dialogue">
+              <p><b>Teacher:</b> Jambo!</p>
+              <p><b>Student:</b> Jambo!</p>
+              <p><b>Teacher:</b> Unaitwa nani?</p>
+              <p><b>Student:</b> Naitwa John.</p>
+              <p><b>Teacher:</b> Habari yako?</p>
+              <p><b>Student:</b> Nzuri, asante.</p>
+            </div>
+            <button class="speak-btn" onclick="speakLesson()">🔊 Listen to the dialogue</button>
+          </article>
+        </div>
+
+        <div class="exercise">
+          <h3>✍️ Your Practice</h3>
+          <p>Complete the sentence:</p>
+          <p class="question"><strong>“My name is Gift.”</strong></p>
+          <div class="answers">
+            <button onclick="checkAnswer(this, false)">Naitwa nani?</button>
+            <button onclick="checkAnswer(this, true)">Naitwa Gift.</button>
+            <button onclick="checkAnswer(this, false)">Habari Gift.</button>
+          </div>
+          <p id="answerResult" class="answer-result" aria-live="polite"></p>
+        </div>
+
+        <div class="student-task">
+          <h3>🎯 Speak aloud</h3>
+          <p>Introduce yourself using:</p>
+          <div class="formula">Jambo! Naitwa <strong>YOUR NAME</strong>. Habari yako?</div>
+          <p>Practice it three times. Then use the WhatsApp button below to book a live lesson.</p>
+          <a class="btn btn-primary" href="#book">Book a Live Lesson</a>
+        </div>
+
+        <div class="next-lesson">
+          <div>
+            <span class="lesson-badge">UP NEXT</span>
+            <h3>Lesson 2: Numbers &amp; Everyday Words</h3>
+          </div>
+          <button class="btn btn-outline green-outline" onclick="alert('Lesson 2 is coming soon!')">Next Lesson →</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking" id="book">
+      <div class="section-inner">
+        <h2 class="section-title">Ready to Learn Kiswahili?</h2>
+        <p class="section-subtitle">
+          Book a lesson or contact us to get started.
+        </p>
+
+        <div class="contact-box">
+          <p><strong>WhatsApp:</strong> +254 142 984 551</p>
+          <p><strong>Email:</strong> orieccogift08@gmail.com</p>
+
+          <div class="buttons" style="justify-content:center; margin-top:22px;">
+            <a class="btn btn-primary"
+               href="https://wa.me/254142984551?text=Hello%20Jifunze%20Kiswahili%2C%20I%20would%20like%20to%20book%20a%20lesson."
+               target="_blank" rel="noopener">
+              Book on WhatsApp
+            </a>
+            <a class="btn btn-outline"
+               href="mailto:orieccogift08@gmail.com">
+              Send Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 JIFUNZE KISWAHILI | Learn Kiswahili</p>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+      const open = navLinks.classList.toggle("show");
+      menuBtn.setAttribute("aria-expanded", open);
+      menuBtn.textContent = open ? "✕" : "☰";
+    });
+
+
+    function checkAnswer(button, correct) {
+      const result = document.getElementById("answerResult");
+      if (correct) {
+        result.textContent = "✅ Correct! Naitwa Gift means “My name is Gift.”";
+        result.style.color = "#075b43";
+      } else {
+        result.textContent = "❌ Try again. Look for the phrase that means “My name is...”";
+        result.style.color = "#b33a3a";
+      }
+    }
+
+    function speakLesson() {
+      if (!("speechSynthesis" in window)) {
+        alert("Audio is not supported on this browser.");
+        return;
+      }
+      const text = "Jambo! Jambo! Unaitwa nani? Naitwa John. Habari yako? Nzuri, asante.";
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = "sw-KE";
+      utterance.rate = 0.82;
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(utterance);
+    }
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("show");
+        menuBtn.setAttribute("aria-expanded", "false");
+        menuBtn.textContent = "☰";
+      });
+    });
+  </script>
+</body>
+</html>
