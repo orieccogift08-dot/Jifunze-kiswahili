@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jifunze Kiswahili | Learn Kiswahili Online</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar">
+  <a class="logo" href="#home">🇰🇪 Jifunze Kiswahili</a>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <nav id="navLinks">
+    <a href="#home">Home</a><a href="#lessons">Lessons</a><a href="#how">How it works</a>
+    <a href="#pricing">Pricing</a><a href="#payment">Payment</a><a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-content">
+    <span class="badge">ONLINE KISWAHILI LESSONS</span>
+    <h1>Speak Kiswahili with <span>confidence.</span></h1>
+    <p>Learn practical Kiswahili through simple lessons, conversation, vocabulary, grammar and real-life situations.</p>
+    <div class="buttons"><a class="btn primary" href="#lessons">Start Learning</a><a class="btn secondary" href="#contact">Book a Lesson</a></div>
+  </div>
+</section>
+
+<section id="lessons" class="section">
+<div class="section-title"><span>WHAT YOU WILL LEARN</span><h2>Build your Kiswahili step by step</h2></div>
+<div class="cards">
+<article class="card"><div class="icon">👋</div><h3>Greetings & Introductions</h3><p>Useful expressions for meeting people and introducing yourself.</p><button onclick="showLesson('Greetings & Introductions','Jambo! Habari yako? Mimi naitwa... Learn greetings, names, countries and simple introductions.')">Preview lesson</button></article>
+<article class="card"><div class="icon">🗣️</div><h3>Conversation</h3><p>Practice everyday Kiswahili and communicate naturally.</p><button onclick="showLesson('Everyday Conversation','Practice questions, answers, shopping, directions, family and daily activities.')">Preview lesson</button></article>
+<article class="card"><div class="icon">📚</div><h3>Vocabulary</h3><p>Grow your vocabulary through real-life topics.</p><button onclick="showLesson('Vocabulary','Learn words for people, food, school, travel, work, time, places and everyday life.')">Preview lesson</button></article>
+<article class="card"><div class="icon">✍️</div><h3>Grammar</h3><p>Understand sentence structure and use Kiswahili correctly.</p><button onclick="showLesson('Kiswahili Grammar','Learn noun classes, verbs, pronouns, tenses and sentence construction.')">Preview lesson</button></article>
+<article class="card"><div class="icon">🎧</div><h3>Listening & Pronunciation</h3><p>Train your ear and improve pronunciation.</p><button onclick="showLesson('Listening & Pronunciation','Listen, repeat and practice common Kiswahili sounds and expressions.')">Preview lesson</button></article>
+<article class="card"><div class="icon">📝</div><h3>Exercises</h3><p>Test your progress with short quizzes and activities.</p><button onclick="showLesson('Practice Exercises','Complete vocabulary, grammar, translation and conversation exercises after each lesson.')">Preview lesson</button></article>
+</div>
+</section>
+
+<section id="how" class="section alt">
+<div class="section-title"><span>HOW IT WORKS</span><h2>Start learning in 3 simple steps</h2></div>
+<div class="steps">
+<div class="step"><b>1</b><h3>Choose a lesson</h3><p>Select the level or topic you want to study.</p></div>
+<div class="step"><b>2</b><h3>Book & pay</h3><p>Choose your payment method and complete payment.</p></div>
+<div class="step"><b>3</b><h3>Join the lesson</h3><p>Receive your lesson time/link and start learning.</p></div>
+</div>
+</section>
+
+<section id="pricing" class="section">
+<div class="section-title"><span>LESSON PACKAGES</span><h2>Choose your learning plan</h2></div>
+<div class="pricing">
+<div class="price-card"><h3>Single Lesson</h3><div class="price">KSh ___</div><p>One private Kiswahili lesson.</p><ul><li>✓ Personal instruction</li><li>✓ Speaking practice</li><li>✓ Lesson materials</li></ul><a class="btn primary" href="#payment">Pay & Book</a></div>
+<div class="price-card featured"><div class="popular">POPULAR</div><h3>Weekly Package</h3><div class="price">KSh ___</div><p>Regular practice for faster progress.</p><ul><li>✓ Multiple lessons</li><li>✓ Conversation practice</li><li>✓ Exercises & feedback</li></ul><a class="btn primary" href="#payment">Pay & Book</a></div>
+<div class="price-card"><h3>Group Lessons</h3><div class="price">KSh ___</div><p>Learn together with friends or classmates.</p><ul><li>✓ Interactive lessons</li><li>✓ Group conversation</li><li>✓ Shared exercises</li></ul><a class="btn primary" href="#payment">Ask about groups</a></div>
+</div>
+</section>
+
+<section id="payment" class="section payment">
+<div class="section-title"><span>PAYMENT METHODS</span><h2>Pay securely and send your proof</h2><p>Choose the payment method available to you. Replace the placeholders below with your actual account details before publishing.</p></div>
+<div class="payment-grid">
+<div class="pay-card"><div class="pay-icon">📱</div><h3>M-PESA — Kenya</h3><p><strong>Paybill:</strong> YOUR_PAYBILL</p><p><strong>Account:</strong> JIFUNZE KISWAHILI</p><p>Or use your <strong>Till Number:</strong> YOUR_TILL_NUMBER</p><small>After payment, send the transaction message/proof through WhatsApp.</small></div>
+<div class="pay-card"><div class="pay-icon">🏦</div><h3>Bank Transfer — Kenya</h3><p><strong>Bank:</strong> KCB Bank</p><p><strong>Account:</strong> 135554131</p><p><strong>Account name:</strong> JIFUNZE KISWAHILI</p><small>Use your name as the payment reference.</small></div>
+<div class="pay-card"><div class="pay-icon">🌍</div><h3>International Students</h3><p><strong>Bank:</strong> KCB Bank</p><p><strong>Account:</strong> 135554131</p><p><strong>International transfer:</strong> Contact us for SWIFT/BIC and other required transfer details.</p><p><strong>Currency:</strong> USD / EUR / GBP</p><small>Contact us first for the current international payment instructions.</small></div>
+</div>
+<div class="payment-action">
+<h3>Already paid?</h3><p>Send your name, lesson package and transaction/reference number.</p>
+<a class="btn primary" href="https://wa.me/254XXXXXXXXX?text=Hello%20Jifunze%20Kiswahili%2C%20I%20have%20made%20a%20payment.%20My%20name%20is%20">Send Payment Proof on WhatsApp</a>
+</div>
+</section>
+
+<section id="contact" class="section contact">
+<div class="contact-box">
+<div><span>READY TO START?</span><h2>Let's learn Kiswahili together.</h2><p>Send your name, level and preferred lesson. You can then receive payment instructions and book your class.</p></div>
+<form onsubmit="sendMessage(event)">
+<input id="name" type="text" placeholder="Your name" required>
+<select id="level" required><option value="">Choose your level</option><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select>
+<select id="lesson" required><option value="">Choose a lesson</option><option>Private lesson</option><option>Conversation</option><option>Grammar</option><option>Group lesson</option></select>
+<button class="btn primary" type="submit">Send Booking Request</button>
+</form>
+</div>
+</section>
+</main>
+
+<footer><strong>🇰🇪 Jifunze Kiswahili</strong><p>Learn. Speak. Connect.</p><small>© 2026 Jifunze Kiswahili. All rights reserved.</small></footer>
+
+<div id="modal" class="modal" onclick="closeLesson(event)"><div class="modal-box"><button class="close" onclick="hideLesson()">×</button><h2 id="modalTitle"></h2><p id="modalText"></p><a class="btn primary" href="#contact" onclick="hideLesson()">Book this lesson</a></div></div>
+
+<script>
+function toggleMenu(){document.getElementById('navLinks').classList.toggle('open')}
+function showLesson(t,x){document.getElementById('modalTitle').textContent=t;document.getElementById('modalText').textContent=x;document.getElementById('modal').classList.add('show')}
+function hideLesson(){document.getElementById('modal').classList.remove('show')}
+function closeLesson(e){if(e.target.id==='modal')hideLesson()}
+function sendMessage(e){
+ e.preventDefault();
+ const n=document.getElementById('name').value,l=document.getElementById('level').value,s=document.getElementById('lesson').value;
+ const msg=`Hello, I would like to book a Kiswahili lesson.%0AName: ${encodeURIComponent(n)}%0ALevel: ${encodeURIComponent(l)}%0ALesson: ${encodeURIComponent(s)}`;
+ window.open(`https://wa.me/254XXXXXXXXX?text=${msg}`,'_blank');
+}
+</script>
+</body>
+</html>
